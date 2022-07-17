@@ -1,0 +1,111 @@
+<html>
+
+<head>
+    <link rel="icon" type="img/png" href="C:\Users\mithi\Downloads\Portfolio Mithil\Portfolio\Images\letter-m.png" />
+    <title>Mithil Jain</title>
+    <link rel="stylesheet" href="style.css">
+    <!--GOOGLE FONTS START-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@600&family=Julius+Sans+One&family=Pridi&family=Satisfy&display=swap"
+        rel="stylesheet">
+    <!--GOOGLE FONTS END-->
+
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo">
+            <a href="index.html">
+                <h2><span style="color:#DAA520"><b>MITHIL</b></span> <b>JAIN</b></h2>
+            </a>
+        </div>
+        <div class="nav_content">
+            <a href="index.html"> Main Page</a>
+            <a href="resume.html">Resume</a>
+            <a href="#contactt">Contact</a>
+        </div>
+    </div>
+
+    <div class="resume">
+        <img src="C:\Users\mithi\Downloads\Portfolio Mithil\Portfolio\Images\r11.png" width="100%" height="auto">
+        <img src="C:\Users\mithi\Downloads\Portfolio Mithil\Portfolio\Images\r22.png" width="100%" height="auto">
+    </div>
+
+    <div id="contactt">
+        <div class="contact">
+            <h1>Contact</h1>
+            <div class="feed">
+                <div class="feed-form">
+                    <form name="submit-googlesheet" method="post">
+                        <input type="text" name="Name" placeholder="Name"> <br>
+                        <input type="email" name="Email" placeholder="Email Address"> <br>
+                        <input type="tel" name="Phone" placeholder="Phone Number" pattern="[0-9]{10}"> <br>
+                        <input type="text" name="Review" placeholder="Write your feedback"><br>
+                        <button type="submit"> S U B M I T </button>
+                    </form>
+                </div>
+            </div>
+            <div class="social_media_icon">
+                <a href="https://www.linkedin.com/in/mithil-jain-83b30a189/" target="_blank">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+
+                <a href="https://github.com/mrjain18" target="_blank">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+
+                <a href="mailto: mithiljain94@gmail.com" target="_blank">
+                    <ion-icon name="mail-unread-outline"></ion-icon>
+                </a>
+                <a href="https://www.instagram.com/mr.jain18/" target="_blank">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+
+                <a href="https://www.facebook.com/mithiljain05/" target="_blank">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+
+                <a href="https://twitter.com/mr_jain18">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+
+
+                <a href="https://wa.me/916301679895" target="_blank">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                </a>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="footer">
+        <h6> © 2022 Mithil Jain All Rights Reserved </h6>
+    </div>
+
+    <script type="text/javascript">
+        const scriptURL =
+            'https://script.google.com/macros/s/AKfycbx3vusSK1hSorXmDVr6lyJ4goFYQv2sFJPUWUkwEPRGlX8hUPAsRIb_87zbxCp9mfNW/exec'
+        const form = document.forms['submit-googlesheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form)
+            })
+                .then(response => alert(
+                    "Thanks for you valuable feedback!!!"))
+                .catch(error => console.error('Error!', error.message))
+        })
+
+    </script>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
